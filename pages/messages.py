@@ -2,7 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
-from flask import url_for
 from selenium.webdriver.common.by import By
 
 from base import Base
@@ -17,7 +16,7 @@ class MessagesPage(Base):
     _title_locator = (By.ID, 'title')
 
     def open(self):
-        self.selenium.get(url_for('show_entries', _external=True))
+        self.selenium.get(self.base_url)
 
     def create_message(self, title, text):
         self.type_title(title)
@@ -43,8 +42,8 @@ class MessagesPage(Base):
         _title_locator = (By.TAG_NAME, 'h2')
         _text_locator = (By.CLASS_NAME, 'text')
 
-        def __init__(self, testsetup, root_element):
-            Page.__init__(self, testsetup)
+        def __init__(self, root_element):
+            Page.__init__(self.base_url, self.selenium)
             self._root_element = root_element
 
         @property
