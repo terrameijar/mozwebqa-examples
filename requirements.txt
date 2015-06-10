@@ -1,6 +1,6 @@
 Flask
 pytest
 pytest-flask
-pytest-mozwebqa
 pytest-variables
 pytest-xdist
+git+git://github.com/davehunt/pytest-selenium#egg=pytest-selenium
