@@ -33,6 +33,27 @@ This repository contains Selenium tests used to test:
 
 * Link to project being tested
 
+###You will need to install the following:
+
+#### Git
+If you have cloned this project already then you can skip this!
+GitHub has excellent guides for [Windows][GitWin], [MacOSX][GitMacOSX], and
+[Linux][GitLinux].
+
+#### Python
+Before you will be able to run these tests you will need to have
+[Python 2.6][Python] installed.
+[Python]: http://www.python.org/download/releases/2.6.6/
+
+####Virtualenv and Virtualenvwrapper (Optional/Intermediate level)
+While most of us have had some experience using virtual machines, 
+[virtualenv][venv] is something else entirely.  It's used to keep libraries
+that you install from clashing and messing up your local environment.  After
+installing virtualenv, installing [virtualenvwrapper][wrapper] will give you
+some nice commands to use with virtualenvwrapper. [virtualenv][venv] will allow
+you to install Python modules and run your tests in a sandboxed environment. 
+
+
 __note__
 
 This is not necessary but is really helpful if you are working on multiple
@@ -63,3 +84,8 @@ several flags. To run testcases that do not modify or delete data:
 [firefox]: http://quality.mozilla.org/teams/desktop-firefox/
 [webdriver]: http://seleniumhq.org/docs/03_webdriver.html
 [mozwebqa]:http://02.chat.mibbit.com/?server=irc.mozilla.org&channel=#mozwebqa    
+[GitWin]: http://help.github.com/win-set-up-git/
+[GitMacOSX]: http://help.github.com/mac-set-up-git/
+[GitLinux]: http://help.github.com/linux-set-up-git/
+[venv]: http://pypi.python.org/pypi/virtualenv
+[wrapper]: http://www.doughellmann.com/projects/virtualenvwrapper/
